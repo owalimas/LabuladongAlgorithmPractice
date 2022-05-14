@@ -1,4 +1,4 @@
-package com.jungle.Linked;
+package com.jungle.day01;
 
 /**
  * @Description
