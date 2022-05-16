@@ -16,7 +16,6 @@ import java.util.Scanner;
  * 5.283. 移动零
  * 6.167. 两数之和 II - 输入有序数组
  * 7.5. 最长回文子串
- * 8.76. 最小覆盖子串(滑动窗口，左右指针)
  * @Author Jungle
  * @DATE 2022/5/14
  **/
@@ -163,66 +162,5 @@ public class PracticeDay02 {
         //这里注意边界，l+1,r 左闭右开，
         //直接考虑最后 l = 0  和 r = s.length() -1 进入循环，出来后的情况
         return s.substring(l + 1, r);
-    }
-
-    //76. 最小覆盖子串
-    // 作为滑动窗口的模板题，进行训练
-    public String minWindow(String s, String t) {
-        //分别记录需要寻找的字串匹配情况，以及原字串上的滑动窗口匹配情况
-        Map<Character, Integer> need = new HashMap<>();
-        for (int i = 0; i < t.length(); i++) {
-            need.put(t.charAt(i), need.getOrDefault(t.charAt(i), 0) + 1);
-        }
-        Map<Character, Integer> window = new HashMap<>();
-        //按照左闭右开的规则去进行
-        int left = 0, right = 0;
-        //其中 valid 变量表示窗口中满足 need 条件的字符个数，如果 valid 和 need.size() 的大小相同，则说明窗口已满足条件
-        int valid = 0;
-        // 非模板：start最小覆盖字串的起始索引，len: 最小覆盖字串的大小，最后还是最大值表明未匹配上
-        int start = 0, len = Integer.MAX_VALUE;
-        while (right < s.length()) {
-            //移入窗口的元素
-            char c = s.charAt(right);
-              //扩大窗口
-            right++;
-            //一系列操作
-            if (need.containsKey(c)) {
-                window.put(c, window.getOrDefault(c, 0) + 1);
-                //同一个字母的话，valid也只会加一次
-                if (window.get(c).equals(need.get(c))) {
-                    valid++;
-                }
-            }
-            //判断左侧窗口是否需要收缩,当前窗口内满足need所需的条件，就是所有字母都至少有一个
-            while (valid == need.size()) {
-                //缩小窗口前的一系列操作
-                if (right - left < len) {
-                    start = left;
-                    len = right - left;
-                }
-                //一处窗口的元素
-                char d = s.charAt(left);
-                //窗口缩小
-                left++;
-                //进行窗口内数据的一系列更新
-                if (need.containsKey(d)) {
-                    if (window.get(d).equals(need.get(d))) {
-                        valid--;
-                    }
-                    window.put(d, window.getOrDefault(d, 0) - 1);
-                }
-            }
-
-        }
-        //返回最终结果，如果和初始值相同，那么就是没找到,找到
-        return len == Integer.MAX_VALUE ? "" : s.substring(start,start+len);
-    }
-
-    @Test
-    public void testMinWindow() {
-        String s = "EBBANCF";
-        String t = "ABC";
-        String res = this.minWindow(s, t);
-        System.out.println(res);
     }
 }
