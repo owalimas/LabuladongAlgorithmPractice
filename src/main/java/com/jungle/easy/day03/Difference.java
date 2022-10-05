@@ -1,4 +1,4 @@
-package com.jungle.day03;
+package com.jungle.easy.day03;
 
 /**
  * @Description 差分数组工具类

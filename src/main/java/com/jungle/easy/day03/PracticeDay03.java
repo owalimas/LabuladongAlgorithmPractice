@@ -1,6 +1,4 @@
-package com.jungle.day03;
-
-import java.util.HashMap;
+package com.jungle.easy.day03;
 
 /**
  * @Description Day03. 差分数组技巧

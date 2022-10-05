@@ -1,4 +1,4 @@
-package com.jungle.day05;
+package com.jungle.easy.day05;
 
 import org.junit.Test;
 
@@ -6,7 +6,7 @@ import java.util.*;
 
 /**
  * @Description Day05. 滑动窗口技巧
- * 1.76. 最小覆盖子串(滑动窗口，左右指针)
+     * 1.76. 最小覆盖子串(滑动窗口，左右指针)
  * 2.567. 字符串的排列
  * 3.438. 找到字符串中所有字母异位词
  * @Author Jungle

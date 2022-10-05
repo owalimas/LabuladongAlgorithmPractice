@@ -1,4 +1,4 @@
-package com.jungle.day01;
+package com.jungle.easy.day01;
 
 import java.util.PriorityQueue;
 

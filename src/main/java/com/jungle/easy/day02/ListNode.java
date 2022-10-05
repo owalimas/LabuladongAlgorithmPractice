@@ -1,4 +1,4 @@
-package com.jungle.day02;
+package com.jungle.easy.day02;
 
 /**
  * @Description

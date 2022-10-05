@@ -1,10 +1,6 @@
-package com.jungle.day02;
+package com.jungle.easy.day02;
 
 
-import org.junit.Test;
-
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
