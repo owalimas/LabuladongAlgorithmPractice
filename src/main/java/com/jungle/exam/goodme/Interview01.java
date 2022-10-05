@@ -1,4 +1,4 @@
-package com.jungle.exam;
+package com.jungle.exam.goodme;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
  * @DATE 2022/9/21
  **/
 
-public class gm {
+public class Interview01 {
     public static void main(String[] args) {
         int[][] edges = {
                 {0, 1}, {1, 2}, {2, 1}, {2, 3}

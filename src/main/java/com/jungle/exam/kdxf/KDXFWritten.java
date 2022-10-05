@@ -1,4 +1,4 @@
-package com.jungle.exam;
+package com.jungle.exam.kdxf;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @Author Jungle
  * @DATE 2022/9/18
  **/
-public class kdxf {
+public class KDXFWritten {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int m = 0, n = 0;

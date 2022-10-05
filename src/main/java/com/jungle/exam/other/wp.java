@@ -1,4 +1,4 @@
-package com.jungle.exam;
+package com.jungle.exam.other;
 
 import java.util.*;
 

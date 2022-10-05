@@ -1,12 +1,12 @@
-package com.jungle.exam;
+package com.jungle.exam.other;
 
 import java.util.Date;
 import java.util.Scanner;
 
-/**
+/** 同学阿里蚂蚁金服笔试题
  * 題目：b == 2a c = 4a 輸入數字，求最少个数的字母组成
  */
-public class alimayi {
+public class ALMYWritten {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
